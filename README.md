@@ -7,4 +7,4 @@ Lesson material is found in the lessons/ folder.
 
 References:
 
-Sample accelerometer data contributed to Kaggle by Swayam Mittal (CC0)
+Sample accelerometer data contributed to Kaggle by Swayam Mittal (CC0): https://www.kaggle.com/swayammittal65/wearable-motion-sensors/
