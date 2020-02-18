@@ -13159,7 +13159,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.fftpack</span> <span class="k">import</span> <span class="n">fft</span><span class="p">,</span> <span class="n">fftfreq</span><span class="p">,</span> <span class="n">fftshift</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.fftpack</span> <span class="kn">import</span> <span class="n">fft</span><span class="p">,</span> <span class="n">fftfreq</span><span class="p">,</span> <span class="n">fftshift</span>
 
 <span class="n">freq_y</span> <span class="o">=</span> <span class="n">fftshift</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fft</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span> <span class="c1"># fft, with centered origin</span>
 <span class="n">freq_x</span> <span class="o">=</span> <span class="n">fftshift</span><span class="p">(</span><span class="n">fftfreq</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># find frequencies of fft</span>
@@ -13258,7 +13258,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="k">import</span> <span class="n">find_peaks</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">find_peaks</span>
 
 <span class="n">peaks</span> <span class="o">=</span> <span class="n">find_peaks</span><span class="p">(</span><span class="n">freq_y</span><span class="p">)</span>
 <span class="n">peak_coords</span> <span class="o">=</span> <span class="n">freq_x</span><span class="p">[</span><span class="n">peaks</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
@@ -13526,7 +13526,7 @@ Values returned from FFT: [1.56751328 3.2036844  0.94398816 2.20086364]
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.fftpack</span> <span class="k">import</span> <span class="n">ifft</span><span class="p">,</span> <span class="n">ifftshift</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.fftpack</span> <span class="kn">import</span> <span class="n">ifft</span><span class="p">,</span> <span class="n">ifftshift</span>
 
 <span class="n">y_fft</span> <span class="o">=</span> <span class="n">fftshift</span><span class="p">(</span><span class="n">fft</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
 <span class="n">y_from_fft</span> <span class="o">=</span> <span class="n">ifft</span><span class="p">(</span><span class="n">ifftshift</span><span class="p">(</span><span class="n">y_fft</span><span class="p">))</span>
@@ -13878,7 +13878,7 @@ Imaginary part: -0.10087345582892163
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span> <span class="o">*</span> <span class="n">c_num</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span> <span class="o">*</span> <span class="n">c_num</span><span class="o">.</span><span class="n">imag</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Plotting </span><span class="si">{c_num}</span><span class="s1"> on the complex plane&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Plotting </span><span class="si">{c_num}</span><span class="s1"> on the complex plane&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">})</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Real part&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Imaginary part&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">font</span><span class="p">);</span>
 </pre></div>
@@ -13926,9 +13926,9 @@ Imaginary part: -0.10087345582892163
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">magnitude</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">c_num</span><span class="o">.</span><span class="n">real</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">c_num</span><span class="o">.</span><span class="n">imag</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">c_num</span><span class="o">.</span><span class="n">imag</span><span class="o">/</span><span class="n">c_num</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Complex value: </span><span class="si">{c_num}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Magnitude: </span><span class="si">{magnitude}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Angle: </span><span class="si">{angle}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Complex value: </span><span class="si">{c_num}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude: </span><span class="si">{magnitude}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Angle: </span><span class="si">{angle}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13970,8 +13970,8 @@ Angle: 0.83798122500839
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Magnitude: {np.abs(c_num)}&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Angle: {np.angle(c_num)}&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude: {np.abs(c_num)}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Angle: {np.angle(c_num)}&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14017,11 +14017,11 @@ Angle: 0.83798122500839
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;fft output:</span><span class="se">\t</span><span class="s1"> </span><span class="si">{fy[:3]}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;fft output:</span><span class="se">\t</span><span class="s1"> </span><span class="si">{fy[:3]}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;magnitudes:</span><span class="se">\t</span><span class="s1"> {np.abs(fy[:3])}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;magnitudes:</span><span class="se">\t</span><span class="s1"> {np.abs(fy[:3])}&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;phases:</span><span class="se">\t</span><span class="s1"> {np.angle(fy[:3])}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;phases:</span><span class="se">\t</span><span class="s1"> {np.angle(fy[:3])}&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14198,7 +14198,7 @@ phases:	 [-3.14159265 -1.56765473 -1.56451314]
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.transform</span> <span class="k">import</span> <span class="n">rotate</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.transform</span> <span class="kn">import</span> <span class="n">rotate</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">100</span>
 <span class="n">image_size</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -14263,7 +14263,7 @@ phases:	 [-3.14159265 -1.56765473 -1.56451314]
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.fftpack</span> <span class="k">import</span> <span class="n">fftn</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.fftpack</span> <span class="kn">import</span> <span class="n">fftn</span>
 
 <span class="c1"># Get magnitudes</span>
 <span class="n">image0_mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fftn</span><span class="p">(</span><span class="n">image0</span><span class="p">))</span>
@@ -14444,7 +14444,7 @@ phases:	 [-3.14159265 -1.56765473 -1.56451314]
     <span class="n">waves</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
     <span class="n">sq_wave</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">waves</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sq_wave</span><span class="p">)</span>
-    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Sum of </span><span class="si">{h}</span><span class="s1"> sine wave harmonics&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sum of </span><span class="si">{h}</span><span class="s1"> sine wave harmonics&#39;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
     
 </pre></div>
 
@@ -14489,8 +14489,8 @@ phases:	 [-3.14159265 -1.56765473 -1.56451314]
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.data</span> <span class="k">import</span> <span class="n">camera</span>
-<span class="kn">from</span> <span class="nn">skimage.color</span> <span class="k">import</span> <span class="n">rgb2gray</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.data</span> <span class="kn">import</span> <span class="n">camera</span>
+<span class="kn">from</span> <span class="nn">skimage.color</span> <span class="kn">import</span> <span class="n">rgb2gray</span>
 
 <span class="n">image</span> <span class="o">=</span> <span class="n">rgb2gray</span><span class="p">(</span><span class="n">camera</span><span class="p">())</span> <span class="c1"># get image</span>
 
@@ -14544,9 +14544,7 @@ phases:	 [-3.14159265 -1.56765473 -1.56451314]
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Challenges">Challenges<a class="anchor-link" href="#Challenges">&#182;</a></h2><ol>
-<li>Load the slide scan data we used in lesson 1 and convert it to grayscale. Now take the FFT and plot both the image and the FFT magnitude.</li>
-</ol>
+<h2 id="Challenges">Challenges<a class="anchor-link" href="#Challenges">&#182;</a></h2><p>1) Load the slide scan data we used in lesson 1 and convert it to grayscale. Now take the FFT and plot both the image and the FFT magnitude.</p>
 <div class="highlight"><pre><span></span><span class="c1"># Hint</span>
 <span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">io</span>
 <span class="kn">from</span> <span class="nn">skimage.color</span> <span class="kn">import</span> <span class="n">rgb2gray</span>
@@ -14554,11 +14552,9 @@ phases:	 [-3.14159265 -1.56765473 -1.56451314]
 <span class="n">image</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../data/bear_kidney.png&#39;</span><span class="p">)</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">rgb2gray</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
-<ol>
-<li>How does the FFT of the cells look different from the <code>camera</code> image we looked at above? Why?</li>
-<li>Apply a gaussian filter to the image (<code>skimage.filters.gaussian</code>). What happens to the FFT magnitude? Why?</li>
-<li>Look at the FFT magnitude of the original <code>moonlanding.png</code> example from lesson 1. What do you think is going on with the image?</li>
-</ol>
+<p>2) How does the FFT of the cells look different from the <code>camera</code> image we looked at above? Why?</p>
+<p>3) Apply a gaussian filter to the image (<code>skimage.filters.gaussian</code>). What happens to the FFT magnitude? Why?</p>
+<p>4) Look at the FFT magnitude of the original <code>moonlanding.png</code> example from lesson 1. What do you think is going on with the image?</p>
 <div class="highlight"><pre><span></span><span class="c1"># Hint</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../data/moonlanding.png&#39;</span><span class="p">)</span>
 </pre></div>
@@ -14578,8 +14574,8 @@ phases:	 [-3.14159265 -1.56765473 -1.56451314]
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="k">import</span> <span class="n">io</span>
-<span class="kn">from</span> <span class="nn">skimage.color</span> <span class="k">import</span> <span class="n">rgb2gray</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">io</span>
+<span class="kn">from</span> <span class="nn">skimage.color</span> <span class="kn">import</span> <span class="n">rgb2gray</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../data/bear_kidney.png&#39;</span><span class="p">)</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">rgb2gray</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 <span class="n">im_fft</span> <span class="o">=</span> <span class="n">fftshift</span><span class="p">(</span><span class="n">fftn</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
@@ -14643,7 +14639,7 @@ phases:	 [-3.14159265 -1.56765473 -1.56451314]
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.filters</span> <span class="k">import</span> <span class="n">gaussian</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.filters</span> <span class="kn">import</span> <span class="n">gaussian</span>
 <span class="n">blurred_image</span> <span class="o">=</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 
 <span class="n">bl_im_fft</span> <span class="o">=</span> <span class="n">fftshift</span><span class="p">(</span><span class="n">fftn</span><span class="p">(</span><span class="n">blurred_image</span><span class="p">))</span>
